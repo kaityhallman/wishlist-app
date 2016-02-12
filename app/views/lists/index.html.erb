@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+<br>
+<%= search_form_for @search do |f| %>
+<div class="field">
+  <%= f.label :name_cont, "Name Contains" %>
+  <%= f.text_field :name_cont %>
+  <%= f.label :price_gteq, "Price Between" %>
+  <%= f.text_field :price_gteq %>
+  <%= f.label :price_lteq, "and" %>
+  <%= f.text_field :price_lteq %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+</div>
+<% end %>
+<br>
+<div class="sort">
+  <p id="top"><strong>Sort Items</strong> <%= sort_link @search, :name, 'Name' %> | 
+  <%= sort_link @search, :category, 'Category' %> | <%= sort_link @search, :price, 'Price' %> | <%= sort_link @search, :size, 'Size' %> | <%= sort_link @search, :color, 'Color' %> | <%= sort_link @search, :priority, 'Priority' %></p>
+</div>
+<br>
+</center>
+
+
+
+<div class="container">
+  <div class="row">
+        <% @lists.each do |list| %>
+    <div class="col-md-6">
+        <div class="thumbnail">
+          <center><h2><%= link_to list.name, list %></h2></center><br>
+          <img src="<%= list.image %>" class="img-rounded">
+          <div class="caption">
+            <p><strong>Category:</strong> <%= list.category %></p>
+            <p>$<%= list.price %></p>
+            <p><strong>Size:</strong> <%= list.size %></p>
+            <p><strong>Color:</strong> <%= list.color %></p>
+            <p><strong>Priority: </strong><%= list.priority %></p>
+            <%= link_to 'Show', list, class: "btn btn-primary" %>
+            <%= link_to 'Edit', edit_list_path(list), class: "btn btn-primary" %>
+            <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+          </div>
+        </div>
+    </div>
+        <% end %>
+  </div>
+        <%= link_to 'New List', new_list_path, class: "btn btn-primary" %>
+<br>
+<br>
+</div>
+

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+<div class="panel panel-default" id="show">
+  <div class="panel-heading">
+    <h3><%= @list.name %></h3><br>
+    <%= image_tag @list.image_url if @list.image.present? %>
+    <div class="panel-body">
+      <p><strong>Category:</strong> <%= @list.category %></p>
+      <p><strong>Price:</strong> <%= @list.price %></p>
+      <p><strong>Size:</strong> <%= @list.size %></p>
+      <p><strong>Color:</strong> <%= @list.color %></p>
+      <p><strong>Priority:</strong> <%= @list.priority %></p>
+      <p><%= link_to "Edit", edit_list_path(@list), class: "btn btn-primary" %> <%= link_to "Back", lists_path, class: "btn btn-primary" %></p>
+    </div>
+  </div>
+</div>
+</center>
