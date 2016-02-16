@@ -29,8 +29,7 @@
         </div>
         
       </form>
-        <li class="active">
-</li>
+ 
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li><%= link_to "View All Items", lists_url %></li>
@@ -42,27 +41,12 @@
 
 <p id="notice"><%= notice %></p>
 
-<br>
-<%= search_form_for @search do |f| %>
-<div class="field">
-  <%= f.label :name_cont, "Name Contains" %>
-  <%= f.text_field :name_cont %>
-  <%= f.label :price_gteq, "Price Between" %>
-  <%= f.text_field :price_gteq %>
-  <%= f.label :price_lteq, "and" %>
-  <%= f.text_field :price_lteq %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-</div>
-<% end %>
-<br>
-<div class="sort">
-  <p id="top"><strong>Sort Items</strong> <%= sort_link @search, :name, 'Name' %> | 
-  <%= sort_link @search, :category, 'Category' %> | <%= sort_link @search, :price, 'Price' %> | <%= sort_link @search, :size, 'Size' %> | <%= sort_link @search, :color, 'Color' %> | <%= sort_link @search, :priority, 'Priority' %></p>
-</div>
-<br>
-</center>
-
-
+<div class="sortbox">
+    <div class="sort">
+      <p id="top"><strong>Sort Items</strong>  <span class="glyphicon glyphicon-play" style="font-size: .7em;" aria-hidden="true"></span> <%= sort_link @search, :name, 'Name' %> | 
+      <%= sort_link @search, :category, 'Category' %> | <%= sort_link @search, :price, 'Price' %> | <%= sort_link @search, :size, 'Size' %> | <%= sort_link @search, :color, 'Color' %> | <%= sort_link @search, :priority, 'Priority' %></p>
+    </div>
+  </div>
 
 <div class="container">
   <div class="row">
@@ -98,7 +82,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+ 
       </div>
     </div>
   </div>
@@ -110,3 +94,4 @@
         <%= link_to 'New Item', new_list_path, class: "btn btn-primary" %>
 </div>
 
+</center>

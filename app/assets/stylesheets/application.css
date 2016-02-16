@@ -53,6 +53,7 @@ h1 {
 
 .jumbotron p {
 	font-size: 14px;
+	margin-bottom: 0;
 }
 
 .container {
@@ -100,15 +101,26 @@ h2#home {
 	background-color: green;
 }
 
-.sort strong, a, a:hover {
-	color: #fff;
+
+.sort strong, p, a, #top {
+	color: #000;
 	font-size: 14px;
 	text-decoration: none;
 }
 
-#top {
-	color: #fff;
-	font-size: 14px;
+.sort a:hover {
+	font-weight: 700;
+	text-decoration: none;
+	color: #000;
+}
+
+.sortbox {
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 67%;
+	padding: 2%;
+	margin: 20px;
+	position: relative;
+	border-radius: 5px;
 }
 
 
