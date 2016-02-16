@@ -7,7 +7,6 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'simple_form'
 gem 'seed_dump'
-gem 'pg'
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -42,6 +41,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+end
+
+group :production, :staging do
+  gem "pg"
 end
 
 group :development do
