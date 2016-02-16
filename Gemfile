@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rmagick', '>= 2.13'
+gem 'rmagick', require: false
 gem 'carrierwave'
 gem 'ransack'
 gem 'simple_form'
