@@ -53,7 +53,6 @@ h1 {
 
 .jumbotron p {
 	font-size: 14px;
-	margin-bottom: 0;
 }
 
 .container {
@@ -61,7 +60,7 @@ h1 {
 }
 
 #body {
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 }
 
 
@@ -155,9 +154,9 @@ h3#new {
 
 .footer {
 	background-color: #1a1a1a;
-	position: fixed;
 	width: 100%;
 	bottom: 0;
+	position: fixed;
 }
 
 .footer p {
