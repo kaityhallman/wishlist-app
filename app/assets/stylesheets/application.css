@@ -40,6 +40,7 @@ h1 {
 }
 
 
+
 .jumbotron {
   background: url(https://images.unsplash.com/photo-1447690709975-318628b14c57?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat 50% 50% fixed; 
   background-size: cover;
@@ -58,6 +59,15 @@ h1 {
 	width: 70%;
 }
 
+.caption {
+	text-align: center;
+}
+
+.thumbnail {
+	background-color: rgba(255, 255, 255, 0.7);
+	border: none;
+}
+
 .home-text {
 	padding: 15% 0;
 }
@@ -70,6 +80,10 @@ p#home {
 }
 
 h2 {
+	font-weight: 700;
+}
+
+h2#home {
 	color: #fff;
 	font-size: 45px;
 	font-weight: 700;

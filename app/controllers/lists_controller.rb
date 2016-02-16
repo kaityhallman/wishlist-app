@@ -8,6 +8,11 @@ class ListsController < ApplicationController
     @lists = @search.result
   end
 
+  def home
+        @search = List.search(params[:q])
+    @lists = @search.result
+  end
+
   # GET /lists/1
   # GET /lists/1.json
   def show
